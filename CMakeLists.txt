@@ -6,9 +6,11 @@
 # and license in png.h
 
 
-project(PNG C)
+project(png C)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 INCLUDE(dist.cmake)
+
+set(PNG_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 SET(PNG_SHARED TRUE)
 SET(PNG_STATIC FALSE)
