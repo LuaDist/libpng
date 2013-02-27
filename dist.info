@@ -1,0 +1,28 @@
+type = "x86_64"
+arch = "Ubuntu"
+author = "Guy Eric Schalnat, Andreas Dilger, Glenn Randers-Pehrson (current maintainer), and others"
+desc = "official PNG reference library"
+name = "libpng"
+maintainer = "Peter Kapec"
+files = {
+Runtime = {
+[[lib/libpng.so]],
+}
+,
+Documentation = {
+[[share/libpng/doc/libpng.3]],
+[[share/libpng/doc/libpng.3]],
+[[share/libpng/doc/png.5]],
+}
+,
+Header = {
+[[include/png.h]],
+[[include/pngconf.h]],
+[[include/pnglibconf.h]],
+}
+,
+}
+
+license = "libpng license"
+url = "http://www.libpng.org/pub/png/libpng.html"
+version = "1.5.10"
