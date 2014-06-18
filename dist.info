@@ -8,3 +8,7 @@ desc = "official PNG reference library"
 license = "libpng license"
 url = "http://www.libpng.org/pub/png/libpng.html"
 maintainer = "Peter Kapec"
+
+depends = {
+  "zlib >= 1.2"
+}
