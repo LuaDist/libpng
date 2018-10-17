@@ -65,7 +65,13 @@ if ( PNG_DEBUG )
 endif ( )
 include_directories ( ${CMAKE_CURRENT_SOURCE_DIR} ${ZLIB_INCLUDE_DIR} )
 
-add_library ( ${PNG_LIB_NAME} ${libpng_sources} )
+if(PNG_SHARED)
+  set(LIBRARY_TYPE SHARED)
+else()
+  set(LIBRARY_TYPE STATIC)
+endif()
+
+add_library ( ${PNG_LIB_NAME} ${LIBRARY_TYPE} ${libpng_sources} )
 target_link_libraries ( ${PNG_LIB_NAME} ${ZLIB_LIBRARY} ${M_LIBRARY} )
 
 if ( PNG_SHARED AND WIN32 )
